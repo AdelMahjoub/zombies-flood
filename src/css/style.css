@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Audiowide';
+  src: url("../fonts/Audiowide-Regular.ttf");
+}
+html, body{
+    padding: 0px;
+    margin: 0px;
+    user-select: none;
+    overflow: hidden;
+    background-color: #337AB7;
+}
+canvas{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+    cursor: crosshair;
+}

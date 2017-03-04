@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Zombies Flood</title>
+</head>
+<body>
+    
+    <div class="row">
+    <div class="col-xs-12">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <a class="navbar-brand" href="#">Zombies Flood</a>
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#">Github</a>
+            </li>
+            <li>
+                <a href="https://www.freecodecamp.com/adelmahjoub">Freecodecamp</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+    </div>
+    <div class="container">
+    
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+            <canvas></canvas>
+            <p><code>Press <strong>[Arrow Keys]</strong> to move and <strong>[Left Click]</strong> to shoot</code></p>
+        </div>
+    </div>
+    
+    </div>
+    <script>
+        var canvas = document.querySelector("canvas"),
+            ctx = canvas.getContext("2d");
+        canvas.width = 640,
+        canvas.height = 480;
+        var WIDTH = 2400,
+            HEIGHT = 2400;
+    </script>
+    <script src="./src/js/requestAnimationFramePolyfill.js"></script>
+    <script src="./src/js/collision.js"></script>
+    <script src="./src/js/objects.js"></script>
+    <script src="./src/js/controls.js"></script>
+    <script src="./src/js/main.js"></script>
+</body>
+</html>
