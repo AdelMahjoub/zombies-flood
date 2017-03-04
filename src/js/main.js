@@ -76,10 +76,22 @@
         hitFrequency = 5,
         topKills = [0],
         maxKills = 0;
-    
+
+    if (typeof(Storage) !== "undefined") {
+        if(localStorage.length !== 0) {
+            maxKills = localStorage.topScore;
+        } else {
+            localStorage.setItem("topScore", 0);
+        }
+    }
+
     function reset() {
         topKills.push(totalKills);
         maxKills = Math.max(...topKills);
+        // Save top score
+        if(maxKills > localStorage.getItem("topScore")) {
+            localStorage.setItem("topScore", maxKills);
+        }
         totalKills = 0;
         playerTorso.hp = playerTorso.maxHp;
         spawnTimer = 0;
